@@ -6,8 +6,8 @@ import './classBook.dart';
 void main() {
   
   List BooksList = <Book>[];
-  Book book1 = new Book("A", "Karrar", 4.7);
-  Book book2 = new Book("B", "Karrar", 3.2);
+  Book book1 = new Book("Learn Dart", "Karrar", 4.7);
+  Book book2 = new Book("Learn Flutter", "Karrar", 3.2);
   Book.BooksList.add(book1);
   Book.BooksList.add(book2);
   String? input;
