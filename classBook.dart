@@ -53,9 +53,20 @@ class Book {
   }
 
   static void deleteBook() {
-    print("Enter the title of book want to delete : ");
-    String? title = stdin.readLineSync();
-    
+    List<Book>? listBook = Book.BooksList.cast<Book>();
+    if (listBook.isEmpty) {
+      print("There are no Books!");
+    } else {
+      print("Enter the title of the book you want to delete");
+      String? title = stdin.readLineSync();
+      for (var book in listBook) {
+        if (book._title == title) {
+          listBook.remove(book);
+          print("Book deleted");
+          break;
+        }
+      }
+    }
   }
 
   static void updateBook() {
